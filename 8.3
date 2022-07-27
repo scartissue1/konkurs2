@@ -1,0 +1,14 @@
+letters = 'АВЕКМНОРСТУХ' 
+numbers = '0123456789'
+
+count = 0 
+for s1 in letters: 
+    for s2 in numbers:        
+        for s3 in numbers:
+            for s4 in numbers:
+                for s5 in letters:
+                    for s6 in letters:
+                        znak = s1 + s2 + s3 + s4 + s5 + s6 
+                        if ((s2 == s3 == s4 or s1 == s5 == s6) or ((s1 == s6 and s1 != s5) and (s2 == s4 and s2 != s3))) and '000' not in znak:                           
+                            count += 1 
+print(count) # 39312
